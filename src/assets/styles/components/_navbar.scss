@@ -1,0 +1,35 @@
+nav {
+    @include flex($align: center);
+    font-size: 24px;
+    
+    ul {
+        @include flex($gap:57px);
+        list-style-type: none;
+    }
+    
+    a {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        &::after {
+            display: block;
+            text-decoration: underline;
+            height: 1px;
+            background-color: black;
+            transform: scale(0);
+        }
+    }
+    @include screen-size (mobile-l) {
+        ul {
+            gap: 26px;
+            margin-top: -10px;
+        }
+        a {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+}
+

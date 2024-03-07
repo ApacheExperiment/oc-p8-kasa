@@ -1,0 +1,45 @@
+/*Flexbox*/
+
+@mixin flex (
+    $direction: initial,
+    $justify: initial,
+    $align: initial,
+    $gap: initial
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+//Media Queries - Desktop
+$desktop: 1440px;
+$tablet: 1024px;
+$mobile-l: 640px;
+$mobile-m: 425px;
+$mobile-s: 375px;
+
+@mixin screen-size ($size) {
+    @if $size == 'desktop' {
+        @media (min-width: calc($desktop)) {
+            @content;
+        }
+    } @else if $size == 'tablet' {
+        @media (max-width: calc($tablet)) {
+            @content;
+        }
+    } @else if $size == 'mobile-l' {
+        @media (max-width: calc($mobile-l)) {
+            @content;
+        }
+    } @else if $size == 'mobile-m' {
+        @media (max-width: calc($mobile-m)) {
+            @content;
+        }
+    } @else if $size == 'mobile-s' {
+        @media (max-width: calc($mobile-s)) {
+            @content;
+        }
+    }
+}
