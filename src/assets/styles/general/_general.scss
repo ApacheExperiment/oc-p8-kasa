@@ -14,16 +14,21 @@ body {
 a {
     text-decoration: none;
 }
-.container {
+ul {
+    list-style-type: none;
+}
+.home-container {
     @include flex($direction: column, $gap: 43px, $align: center);
     margin: auto;
     max-width: 1240px;
-    padding: 50px, 20px, 0px, 20px;
-    @include screen-size(desktop) {
-        padding: 50px 0px 0px 0px;
+    padding: 50px, 20px, 0, 20px;
+
+    @include responsive(desktop) {
+        padding: 50px 0 0 0;
     }
-    @include screen-size(mobile-l) {
-        padding: 20px 10px 0px 10px;
+
+    @include responsive(mobile-l) {
+        padding: 20px 10px 0 10px;
         gap: 27px;
     }
 }

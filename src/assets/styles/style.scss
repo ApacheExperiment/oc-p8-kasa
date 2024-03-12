@@ -8,8 +8,11 @@
 @import './components/navbar';
 @import './components/header';
 @import './components/cards';
+@import './components/collapse';
 @import './components/footer';
 
+@import './pages/about';
+@import './pages/error404';
 
 //General
 @import './general/general';

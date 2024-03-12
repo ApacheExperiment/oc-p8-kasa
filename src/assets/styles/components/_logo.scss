@@ -2,7 +2,7 @@ header {
     .logo {
         width: 211px;
         height: 68px;
-        @include screen-size(mobile-l) {
+        @include responsive(mobile-l) {
             width: 140px;
             height: 46px;
             margin-top:-10px;

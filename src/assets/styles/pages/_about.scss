@@ -1,0 +1,30 @@
+.about {
+    @include flex($direction: column, $gap: 43px, $align: center);
+    margin: auto;
+    max-width: 1240px;
+    padding: 38px 20px 48px;
+    gap: 38px;
+    &__collapse-container {
+        @include flex($direction: column);
+        width:82.5%;
+    }
+    h3 {
+        border-radius: 5px;
+        font-size: 24px;
+    }
+
+    @include responsive(desktop) {
+        padding: 38px 0 48px;
+    }
+    @include responsive(mobile-l) {
+        padding: 19px 20px 29px;
+        gap: 0px;
+        &__collapse-container {
+            
+            width: 100%;
+        }
+        h3 {
+            font-size: 13px;
+        }
+    }
+}

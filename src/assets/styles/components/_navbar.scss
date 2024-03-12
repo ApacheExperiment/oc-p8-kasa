@@ -4,24 +4,31 @@ nav {
     
     ul {
         @include flex($gap:57px);
-        list-style-type: none;
     }
     
     a {
         position: relative;
         display: block;
         text-decoration: none;
-        color: black;
+        color: $B;
         cursor: pointer;
         &::after {
+            content: '';
             display: block;
             text-decoration: underline;
             height: 1px;
-            background-color: black;
+            background-color: $B;
             transform: scale(0);
+            transition: transform 0.2s ease-in-out;
+        }
+        &:hover:after {
+            transform: scale(1);
+        }
+        &.active {
+            border-bottom: 1px solid $B;
         }
     }
-    @include screen-size (mobile-l) {
+    @include responsive(mobile-l) {
         ul {
             gap: 26px;
             margin-top: -10px;

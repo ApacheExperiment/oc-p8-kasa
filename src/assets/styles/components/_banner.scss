@@ -5,7 +5,7 @@
     position: relative;
     border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px black;
+    box-shadow: 0px 4px 10px $B;
     h1 {
         font-size: 48px;
         color: white;
@@ -26,16 +26,21 @@
         background-size: cover;
         background-position: center;
         z-index: 0;
-        filter: brightness(35%);
+        filter: brightness(45%);
     }
 
-    @include screen-size(tablet) {
+    @include responsive(tablet) {
         h1 {
             font-size: 36px;
         }
     }
-    @include screen-size(mobile-l) {
+    @include responsive(mobile-l) {
         &__homepage {
+            height: 111px;
+            border-radius: 10px;
+            box-shadow: none;
+        }
+        &__about {
             height: 111px;
             border-radius: 10px;
             box-shadow: none;

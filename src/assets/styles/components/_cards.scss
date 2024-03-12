@@ -10,31 +10,48 @@
     padding: 50px;
     margin-bottom: 50px;
     border-radius: 25px;
-    .card {
-        @include flex();
-        position: relative;
-        height: 340px;
-        padding: 20px;
-        border-radius: 10px;
-        overflow: hidden;
-        background-color: $primary-color;
-        color: white;
-    }
-    h2 {
-        position: relative;
-        align-self: flex-end;
-    }
-
-    @include screen-size(mobile-l) {
-        padding: 0;
-        margin-bottom: 27px;
-        background-color: white;
-        row-gap: 20px;
         .card {
-            height: 255px;
+            @include flex();
+            position: relative;
+            height: 340px;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: $primary-color;
+            color: white;
+            &:hover {
+                cursor: pointer;
+            }
+            &:hover >.card__preview {
+                opacity: 0.7;
+            }
+        
+        &__preview {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h2 {
+            position: relative;
+            align-self: flex-end;
+            z-index: +1;
+            font-size: 18px;
         }
     }
-    @include screen-size(mobile-s) {
-        grid-template-columns: repeat(auto-fill,minmax(90%, 3fr));
-    }
+        @include responsive(mobile-l) {
+            padding: 0;
+            margin-bottom: 27px;
+            background-color: $W;
+            row-gap: 20px;
+            .card {
+                height: 255px;
+            }
+        }
+        @include responsive(mobile-s) {
+            grid-template-columns: repeat(auto-fill,minmax(90%, 3fr));
+        }
 }

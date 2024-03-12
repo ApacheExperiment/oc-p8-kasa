@@ -5,10 +5,10 @@ footer {
     margin: auto;
     font-size: 24px;
     padding: 66px 0 29px 0;
-    background-color: black;
-    color: white;
+    background-color: $B;
+    color: $W;
     
-    @include screen-size (mobile-l) {
+    @include responsive (mobile-l) {
         font-size: 12px;
         gap: 0;
         p {
