@@ -48,6 +48,9 @@
         
         .collapse {
             width: 50%;
+            &__button {
+                top: 35px;
+            }
         }
     }
     @include responsive(desktop) {
@@ -73,9 +76,12 @@
     }
     @include responsive(mobile-l) {
         &__collapse-container {
-            @include flex($direction: column, $gap: 30px);
+            @include flex($direction: column, $gap: 5px);
             .collapse {
                 width: 100%;
+                &__button {
+                    top: 25px;
+                }
             }
         }
         &__head {

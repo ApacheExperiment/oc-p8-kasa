@@ -8,9 +8,9 @@ function Rating({ rating }) {
             {/* Mapping sur la plage de valeurs pour afficher les étoiles */}
             {set.map((index, setElem) =>
             rating < setElem ? (
-                <Star key={index} color="neutral" />
+                <Star key={index} isActive={false} />
             ) : (
-                <Star key={index} color="highlight" />
+                <Star key={index} isActive={true} />
             )
             )}
         </div>

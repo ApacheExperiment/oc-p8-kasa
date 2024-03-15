@@ -1,0 +1,37 @@
+.button-slide {
+    @include flex($justify: flex-start);
+    width: 96px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    img {
+        height: 79px;
+    }
+    &__before {
+        left:0;
+        padding-left: 23px;
+    }
+    &__after {
+        right: 0;
+        padding-right: 23px;
+    }
+    @include responsive(mobile-l) {
+        padding-top: 1.5px;
+        width: 24px;
+        height: 24px;
+        &__before {
+            padding-left: 5px;
+        }
+        &__after {
+            padding-right: 5px;
+        }
+        img {
+            height: 20px;
+        }
+    }
+}

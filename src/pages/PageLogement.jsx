@@ -6,7 +6,7 @@ import logementsData from '../datas/logements.json'
 import { useEffect } from 'react'       //Permettera d'exécuter un effet de bord lors du rendu du composant
 import Tags from '../components/Tags'
 import Rating from '../components/Rating'
-
+import Error from './Error'
 
 function PageLogement() {
     useEffect(() => {               // Effet de bord pour faire défiler la page vers le haut lors du chargement du composant
@@ -17,7 +17,7 @@ function PageLogement() {
     const logement = logementsData.find((logement) => logement.id === idLogement); // Trouver le logement correspondant à l'ID
 
     if (!logement) {
-        return <div>Logement non trouvé</div>;
+        return <Error />;
     }
         
 return (

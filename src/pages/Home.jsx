@@ -14,6 +14,7 @@ function Home() {         //Contenu et composant de la page d'accueil
         <Banner
               titleBanner={titleBanner}
               bannerPage={bannerPage}
+              
         /> 
           <div className="cards-container"> 
           {/* Mapping sur les données de logement pour créer des liens vers les pages de chaque logements */}

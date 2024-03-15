@@ -10,14 +10,14 @@ import About from '../pages/About'
 function Router() {
     return (
         <BrowserRouter>                                     {/*Conteneur pour les routes*/}
-        <Header />
-        <Routes>                                            {/*Déclaration des routes pour l'application*/}
-            <Route path="/" element={<Home />}/>
-            <Route path="/home" element={<Home />}/>
-            <Route path="/about" element={<About />}/>
-            <Route path="/logement/:idLogement" element={<PageLogement />}/>
-            <Route path="*" element={<Error/>}/>
-        </Routes>
+            <Header />
+            <Routes>                                            {/*Déclaration des routes pour l'application*/}
+                <Route path="/" element={<Home />}/>
+                <Route path="/home" element={<Home />}/>
+                <Route path="/about" element={<About />}/>
+                <Route path="/logement/:idLogement" element={<PageLogement />}/>
+                <Route path="*" element={<Error/>}/>
+            </Routes>
             <Footer />
         </BrowserRouter>
     )

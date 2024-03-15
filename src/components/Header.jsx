@@ -8,7 +8,8 @@ import NavBar from "./NavBar"
 function Header() {
   return (
     <header>
-      <Link to="/">
+      {/* Utilisation d'une ancre avec l'ID de l'entête, permet qu'au pied de page on puisse revenir à l'entête*/}  
+      <Link to="/" id="header">
         <img src={Logo} alt="logo kasa" className='header logo' />
       </Link>
     
