@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import arrowLeft from '../assets/arrow_left.png'            //// Importation au format PNG
+import arrowLeft from '../assets/arrow_left.png'            // Importation au format PNG
 import arrowRight from '../assets/arrow_right.png'          //   Des images flèches
 
 function SlideButton({ direction, showSlide }) {

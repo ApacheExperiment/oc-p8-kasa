@@ -3,17 +3,17 @@ import { useParams } from 'react-router-dom'
 import Slider from '../components/Slider'
 import Collapse from '../components/Collapse'
 import logementsData from '../datas/logements.json'
-import { useEffect } from 'react'       //Permettera d'exécuter un effet de bord lors du rendu du composant
+import { useEffect } from 'react'               //Permettera d'exécuter un effet de bord lors du rendu du composant
 import Tags from '../components/Tags'
 import Rating from '../components/Rating'
 import Error from './Error'
 
 function PageLogement() {
-    useEffect(() => {               // Effet de bord pour faire défiler la page vers le haut lors du chargement du composant
+    useEffect(() => {                           // Effet de bord pour faire défiler la page vers le haut lors du chargement du composant
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth'})
         }, [])
     
-    const { idLogement } = useParams(); // Récupérer l'ID du logement depuis l'URL
+    const { idLogement } = useParams();         // Récupérer l'ID du logement depuis l'URL
     const logement = logementsData.find((logement) => logement.id === idLogement); // Trouver le logement correspondant à l'ID
 
     if (!logement) {
@@ -27,7 +27,7 @@ return (
             <div className="pageLogement__head">
             <h2 className="pageLogement__title">{logement.title}</h2>
             <p className="pageLogement__location">{logement.location}</p>
-            <Tags  tags={logement.tags}/>
+            <Tags tags={logement.tags}/>
             </div>
          
             <div className="pageLogement__informations">

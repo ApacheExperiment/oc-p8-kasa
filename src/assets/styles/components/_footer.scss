@@ -1,3 +1,5 @@
+//Pied de pages
+
 footer {
     height: 229px;
     @include flex($direction: column, $align: center, $gap: 24px);

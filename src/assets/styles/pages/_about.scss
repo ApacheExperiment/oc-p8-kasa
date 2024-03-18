@@ -1,3 +1,5 @@
+//Page A propos
+
 .about {
     @include flex($direction: column, $gap: 43px, $align: center);
     margin: auto;
