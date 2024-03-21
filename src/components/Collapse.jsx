@@ -14,7 +14,7 @@ function Collapse ({datas, title}) {
         return datas.map((data, index) => <li key={index}>{data}</li>)
     }
 
-    const parentRef = useRef()                  // Référence pour le conteneur parent, utilisée pour calculer la hauteur de l'élément animé
+    const parentRef = useRef()                  // Référence pour le conteneur parent, utilisée pour calculer la hauteur de l'animation
 
     return (
         <div className="collapse">
